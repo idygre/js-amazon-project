@@ -1,7 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Document</title>
+    <title>Amazon</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="styles/amazon.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="header">Header</div>
+
+    <div class="main">
+      <div class="product-grid">
+        <div class="product-container">
+          <div class="product-image-container">
+            Image <img class="product-image" src="" />
+          </div>
+          <div class="product-name">Product name</div>
+          <div class="product-review-container">
+            <img class="product-rating-stars" src="" />
+            <div class="product-rating-count">87</div>
+          </div>
+          <div class="product-price">$0.00</div>
+          <div class="product-quantity-container">Quantity</div>
+          <div class="product-spacer"></div>
+          <div class="added-cart-msg"></div>
+          <button class="add-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/amazon.js"></script>
+  </body>
 </html>
