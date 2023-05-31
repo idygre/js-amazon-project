@@ -8,27 +8,161 @@
       smaller screen sizes like a phone or a tablet). -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="styles/amazon.css" />
+    <!-- font Roboto from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/pages/amazon.css" />
+    <link rel="stylesheet" href="styles/shared/amazon-header.css" />
+    <link rel="stylesheet" href="styles/shared/general.css" />
   </head>
   <body>
-    <div class="header">Header</div>
+    <!--Header-->
+    <div class="header">
+      <div class="header-left-section">
+        <a href="amazon.html" class="header-link">
+          <img class="amazon-logo" src="images/amazon-logo-white.png" alt="" />
+          <img
+            class="amazon-mobile-logo"
+            src="images/amazon-mobile-logo-white.png"
+          />
+        </a>
+      </div>
+
+      <div class="header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search" />
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png" alt="" />
+        </button>
+      </div>
+
+      <div class="header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png" alt="" />
+          <div class="cart-quantity">3</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
 
     <div class="main">
-      <div class="product-grid">
+      <div class="products-grid">
+        <!--Product-->
         <div class="product-container">
           <div class="product-image-container">
-            Image <img class="product-image" src="" />
+            <img class="product-image" src="images/products/plate-set.jpg" />
           </div>
-          <div class="product-name">Product name</div>
-          <div class="product-review-container">
-            <img class="product-rating-stars" src="" />
-            <div class="product-rating-count">87</div>
+          <div class="product-name limit-text-to-2-lines">Product name</div>
+
+          <div class="product-rating-container">
+            <img
+              class="product-rating-stars"
+              src="images/ratings/rating-45.png"
+            />
+            <div class="product-rating-count link-primary">87</div>
           </div>
           <div class="product-price">$0.00</div>
-          <div class="product-quantity-container">Quantity</div>
+          <div class="product-quantity-container">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
           <div class="product-spacer"></div>
-          <div class="added-cart-msg"></div>
-          <button class="add-cart-button">Add to Cart</button>
+          <div class="added-cart-msg">
+            <img src="images/icons/checkmark.png" />
+            Added
+          </div>
+          <button class="add-cart-button button-primary">Add to Cart</button>
+        </div>
+
+        <!--Product-->
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image" src="images/products/plate-set.jpg" />
+          </div>
+          <div class="product-name limit-text-to-2-lines">Product name</div>
+          <div class="product-rating-container">
+            <img
+              class="product-rating-stars"
+              src="images/ratings/rating-45.png"
+            />
+            <div class="product-rating-count link-primary">87</div>
+          </div>
+          <div class="product-price">$0.00</div>
+          <div class="product-quantity-container">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="product-spacer"></div>
+          <div class="added-cart-msg">
+            <img src="images/icons/checkmark.png" /> Added
+          </div>
+          <button class="add-cart-button button-primary">Add to Cart</button>
+        </div>
+
+        <!--Product-->
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image" src="images/products/plate-set.jpg" />
+          </div>
+          <div class="product-name limit-text-to-2-lines">Product name</div>
+          <div class="product-rating-container">
+            <img
+              class="product-rating-stars"
+              src="images/ratings/rating-45.png"
+            />
+            <div class="product-rating-count link-primary">87</div>
+          </div>
+          <div class="product-price">$0.00</div>
+          <div class="product-quantity-container">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="product-spacer"></div>
+          <div class="added-cart-msg">
+            <img src="images/icons/checkmark.png" />
+            Added
+          </div>
+          <button class="add-cart-button button-primary">Add to Cart</button>
         </div>
       </div>
     </div>
