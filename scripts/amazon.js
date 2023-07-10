@@ -3,9 +3,9 @@ let productsHTML = "";
 products.forEach((product) => {
   productsHTML += `
     <div class="product-container">
-      <di v class="product-image-container">
+      <div class="product-image-container">
         <img class="product-image" src="${product.image}" />
-      </di>
+      </div>
       <div class="product-name limit-text-to-2-lines">${product.name}</div>
 
       <div class="product-rating-container">

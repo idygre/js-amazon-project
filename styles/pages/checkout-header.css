@@ -26,15 +26,6 @@
   width: 150px;
 }
 
-.header-link {
-  display: inline-block;
-  padding: 6px;
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
 .amazon-logo {
   width: 100px;
   margin-top: 12px;
