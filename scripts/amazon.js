@@ -73,6 +73,8 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
         productId,
         quantity,
       });
+
+      localStorage.setItem(productId, cart);
     }
     /* Adds the quantities of all items */
     cart.forEach((item) => {
