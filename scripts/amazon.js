@@ -48,6 +48,7 @@ const addedMessageTimeouts = {};
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
   button.addEventListener("click", () => {
+    
     const { productId } = button.dataset;
 
      /* Find the product and assign it to "item" */
@@ -82,9 +83,12 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     //store items into local storage so they can stay in the cart after refreshing
     localStorage.setItem("CART", JSON.stringify(cart));
 
+    let totalPrice = 0
+
     /* Adds the quantities of all items */
     cart.forEach((item) => {
       cartQuantity += item.quantity;
+      totalPrice += (item.priceCents/100) * item.quantity
     });
 
   
@@ -109,3 +113,6 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
 });
 
 
+function addToCart() {
+
+}

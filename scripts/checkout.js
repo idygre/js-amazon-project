@@ -1,5 +1,6 @@
 
 checkoutHTML = "";
+const headerQuantityEl = document.querySelector(".header-middle-section");
 
 function renderCartItems() {
   
@@ -75,3 +76,4 @@ function renderCartItems() {
 
 renderCartItems();
 
+//headerQuantityEl.innerHTML = `Checkout (${cartQuantity} items)`
