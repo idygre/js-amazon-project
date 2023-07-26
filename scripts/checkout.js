@@ -1,9 +1,7 @@
-
 checkoutHTML = "";
-const headerQuantityEl = document.querySelector(".header-middle-section");
+//const headerQuantityEl = document.querySelector(".header-middle-section");
 
 function renderCartItems() {
-  
   cart.forEach((product) => {
     checkoutHTML += `
     
@@ -16,9 +14,13 @@ function renderCartItems() {
           />
           <div class="cart-item-details">
             <div class="product-name">${product.name}</div>
-            <div class="product-price">$${(product.priceCents / 100).toFixed(2)}</div>
+            <div class="product-price">$${(product.priceCents / 100).toFixed(
+              2
+            )}</div>
             <div class="product-quantity">
-              <span> Quantity: <span class="quantity-label">${product.quantity}</span> </span>
+              <span> Quantity: <span class="quantity-label">${
+                product.quantity
+              }</span> </span>
               <span class="update-quantity-link link-primary">Update</span>
               <span class="delete-quantity-link link-primary">Delete</span>
             </div>
@@ -68,7 +70,6 @@ function renderCartItems() {
         </div>
       </div>
     `;
-
   });
 
   document.querySelector(".order-summary").innerHTML = checkoutHTML;
@@ -76,4 +77,15 @@ function renderCartItems() {
 
 renderCartItems();
 
+document.querySelector(
+  ".checkout-quantity-title"
+).innerHTML = `${cartQuantity} items`;
+
+document.querySelector(
+  ".payment-summary-quantity"
+).innerHTML = `Items (${cartQuantity})`;
+
+document.querySelector(
+  ".payment-summary-money"
+).innerHTML = `$${totalPrice.toFixed(2)}`;
 //headerQuantityEl.innerHTML = `Checkout (${cartQuantity} items)`

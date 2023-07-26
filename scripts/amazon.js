@@ -48,11 +48,10 @@ const addedMessageTimeouts = {};
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
   button.addEventListener("click", () => {
-    
     const { productId } = button.dataset;
 
-     /* Find the product and assign it to "item" */
-     const item = products.find((product) => product.id === productId)
+    /* Find the product and assign it to "item" */
+    const item = products.find((product) => product.id === productId);
 
     /* Gets the quantity amount from the selector */
     const quantitySelector = document.querySelector(
@@ -76,22 +75,27 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
       cart.push({
         ...item,
         productId,
-        quantity
+        quantity,
       });
     }
 
     //store items into local storage so they can stay in the cart after refreshing
     localStorage.setItem("CART", JSON.stringify(cart));
 
-    let totalPrice = 0
+    let totalPrice = 0;
 
     /* Adds the quantities of all items */
     cart.forEach((item) => {
       cartQuantity += item.quantity;
-      totalPrice += (item.priceCents/100) * item.quantity
+      totalPrice += (item.priceCents / 100) * item.quantity;
     });
 
-  
+    /* Adds total quantity to local storage */
+    localStorage.setItem("CART-QUANTITY", JSON.parse(cartQuantity));
+
+    /* Adds total price to local storage */
+    localStorage.setItem("CART-TOTAL-PRICE", JSON.parse(totalPrice));
+
     /* changes the cart quantity on the header of the page */
     document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 
@@ -108,11 +112,7 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     }, 2000);
 
     addedMessageTimeouts[productId] = timeoutId;
-
   });
 });
 
-
-function addToCart() {
-
-}
+function addToCart() {}
